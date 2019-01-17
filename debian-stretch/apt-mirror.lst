@@ -1,0 +1,61 @@
+############# config ##################
+#
+# set base_path    /var/spool/apt-mirror
+#
+# set mirror_path  $base_path/mirror
+# set skel_path    $base_path/skel
+# set var_path     $base_path/var
+# set cleanscript $var_path/clean.sh
+# set defaultarch  <running host architecture>
+# set postmirror_script $var_path/postmirror.sh
+# set run_postmirror 0
+set nthreads     20
+set _tilde 0
+#
+############# end config ##############
+
+####################################################
+##     DEBIAN STREACTH       			  ##
+##                AMD-64 - 64bits                 ##
+####################################################
+deb-amd64 http://deb.debian.org/debian stretch main contrib non-free
+#deb-src http://deb.debian.org/debian stretch main contrib non-free
+
+deb-amd64 http://deb.debian.org/debian-security/ stretch/updates main contrib non-free
+#deb-src http://deb.debian.org/debian-security/ stretch/updates main contrib non-free
+
+deb-amd64 http://deb.debian.org/debian stretch-updates main contrib non-free
+#deb-src http://deb.debian.org/debian stretch-updates main contrib non-free
+
+clean http://deb.debian.org/debian
+
+
+####################################################
+##     UBUNTU VERSION bionic Beaver - 18.04       ##
+##                AMD-64 - 64bits                 ##
+####################################################
+
+##  Dépôts officiels  ##
+#deb-amd64 http://fr.archive.ubuntu.com/ubuntu/ bionic main restricted
+#deb-amd64 http://security.ubuntu.com/ubuntu bionic-security main restricted
+
+## Major bug fix updates produced after the final release of the
+## distribution.
+#deb-amd64 http://fr.archive.ubuntu.com/ubuntu/ bionic-updates main restricted
+
+##  Dépôts Universe et Multiverse  ##
+#deb-amd64 http://fr.archive.ubuntu.com/ubuntu/ bionic universe
+#deb-amd64 http://security.ubuntu.com/ubuntu bionic-security universe
+#deb-amd64 http://fr.archive.ubuntu.com/ubuntu/ bionic-updates universe
+#deb-amd64 http://fr.archive.ubuntu.com/ubuntu/ bionic multiverse
+#deb-amd64 http://security.ubuntu.com/ubuntu bionic-security multiverse
+#deb-amd64 http://fr.archive.ubuntu.com/ubuntu/ bionic-updates multiverse
+
+##  Dépôts Backports  ##
+#deb-amd64 http://fr.archive.ubuntu.com/ubuntu/ bionic-backports main restricted universe multiverse
+
+## Dépôt commercial  ##
+#deb-amd64 http://archive.canonical.com/ubuntu bionic partner
+
+## Uncomment the following two lines to add software from Ubuntu's 'extras' repository.##
+#deb-amd64 http://extras.ubuntu.com/ubuntu bionic main
