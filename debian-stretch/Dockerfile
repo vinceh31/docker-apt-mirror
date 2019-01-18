@@ -11,5 +11,6 @@ ADD run.sh /run.sh
 
 # This volume is where the mirrored data will be stored.  
 VOLUME /var/spool/apt-mirror
+VOLUME /var/log
 EXPOSE 80
 CMD /run.sh
