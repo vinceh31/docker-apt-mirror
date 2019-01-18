@@ -5,7 +5,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y apt-mirr
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ADD apt-mirror.lst /etc/apt/mirror.list
-ADD nginx-trusty-mirror.conf etc/nginx/sites-enabled/default
+ADD nginx-bionic-mirror.conf etc/nginx/sites-enabled/default
 ADD cron-apt-mirror /etc/cron.d/apt-mirror
 ADD run.sh /run.sh
 
