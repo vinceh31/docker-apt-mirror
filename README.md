@@ -1,5 +1,5 @@
 # docker-apt-mirror
-apt-mirror Docker Image + Nginx web server
+Docker image based on debian with apt-mirror and Nginx web server  
 
 ## Quick Start
 
