@@ -1,7 +1,7 @@
 FROM debian:stretch-slim
 
 # Install apt-mirror and save some space by removing the apt-cache
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y apt-mirror nginx multitail && \
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y apt-mirror nginx multitail cron && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ADD apt-mirror.lst /etc/apt/mirror.list
