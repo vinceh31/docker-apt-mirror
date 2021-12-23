@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  proxy:
+    image: apt-mirror:latest
+    container_name: apt-mirror
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - /mnt/bak/apt-mirror:/var/spool/apt-mirror
+    networks:
+      - hawa-bridge
+
+networks:
+  hawa-bridge:
+          external: true
