@@ -9,17 +9,6 @@ Forked from https://github.com/flomine/docker-apt-mirror and adapted for debian 
 and parameters should be adjusted to your need.
 
 Launch the apt-mirror docker container as detailed below
-```
-docker run -d \
-    --name=apt-mirror \
-    -p 80:80 \
-    -v /volume1/docker/deb-repository:/var/spool/apt-mirror:rw \
-    flomine/apt-mirror
-```
-
-Where:
-  - `/volume1/docker/deb-repository`: This is where the application stores deb packages and all files needing persistency.
-
 
 ## Usage
 
