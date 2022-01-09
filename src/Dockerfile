@@ -8,7 +8,7 @@ RUN sed -i 's+Translation-\[\^\.\/\]\*\\\.bz2\$}+Translation-\[\^\.\/\]\*\\\.(gz
 
 ADD mirror.list /etc/apt/mirror.list
 ADD nginx-mirror.conf etc/nginx/sites-enabled/default
-ADD cron-apt-mirror /etc/cron.d/apt-mirror
+ADD cron-apt-mirror /etc/cron.d/aptmirror
 ADD run.sh /run.sh
 
 # This volume is where the mirrored data will be stored.  
